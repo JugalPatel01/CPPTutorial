@@ -1,3 +1,5 @@
+// checking wheather a number is prime or not
+
 #include<iostream>
 #include<cmath>
 using namespace std;

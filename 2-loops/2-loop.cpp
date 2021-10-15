@@ -3,23 +3,23 @@ using namespace std;
 int main()
 {
     int a;
-    cout << "----this is from for loop---------------\n";
+    cout << "----This is from for loop---------------\n";
     for (int i = 0; i < 10; i++)
     {
-        cout << "hello "<<i<<""<<endl;
+        cout << "hello I am for loop "<<i<<""<<endl;
     }
 
-    cout<< "------this is from while loop--------------\n";
+    cout<< "------This is from while loop--------------\n";
     int i =0; 
     while(i<10)
     {
-        cout<< "hello "<<i<<""<< endl;
+        cout<< "hello I am while loop "<<i<<""<< endl;
         i++;
     }
     cout<< "----This is from do-while loop-----------------\n";
     i=0;
      do{
-        cout<<"hello " << i << ""<< endl;
+        cout<<"hello I am do-while loop" << i << ""<< endl;
         i++;
      }
      while(i<10);
@@ -31,8 +31,10 @@ int main()
         }
         cout<<i<<"  ";
     }
-     cout<< "----------loop control-----------(break)\n";
+
+     cout<< "\n----------loop control-----------(break)(Is number is prime or not between two numbers)\n";
      int n,m;
+     cout<<"Enter the range "<<endl;
      cin>>n>>m; 
      for(int num=n;num<=m;num++){
      for( i=2;i<num;i++){
