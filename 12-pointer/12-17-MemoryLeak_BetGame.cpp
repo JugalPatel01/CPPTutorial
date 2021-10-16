@@ -13,10 +13,21 @@ using namespace std;
 int cash = 100;
 void play(int bet)
 {
+    /* here we allocate memroy in stack so it never change while we run this program */
+
+    // char c[3] = {'J','Q','K'}
+
+    /* here we allocate memory in heap everytime on executing play function.
+    so if we don't free heap memory then it uses more memory everytime while we calling play function and it turns into memory leak.
+    but here we free that used memory at end of play function so this program not increasing used memory in ram it remains constant. */
+
     char *c = (char *)malloc(3 * sizeof(char));
+
     c[0] = 'J', c[1] = 'Q', c[2] = 'K';
     cout << "shuffling...." << endl;
+
     srand(time(NULL)); // seeding random number generator
+
     int i;
     for (i = 0; i < 5; i++)
     {
@@ -27,7 +38,7 @@ void play(int bet)
         c[y] = temp;
     }
     int playersGuess;
-    cout << "what's the position of queen -1,2 or 3 ? " << endl;
+    cout << "what's the position of queen 1,2 or 3 ? " << endl;
     cin >> playersGuess;
     if (c[playersGuess - 1] == 'Q')
     {
