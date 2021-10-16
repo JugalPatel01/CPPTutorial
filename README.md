@@ -7,6 +7,7 @@
 |Basic Concept| Covered|
 |Object Oriented C++| Not now|
 |Data Structure | Not Now|
+|Standard Template Library(STL) | Covered |
 
 
 
