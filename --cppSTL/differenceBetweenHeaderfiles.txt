@@ -1,7 +1,0 @@
-in c++
-
-iostream is a header file that allows us to use input and output.
-
-bits/stdc++.h is a header file that import every single c++ header file.
-
-(disadvantage of using bits/stdc++.h header file is it increases compilation time because it has to search through every possible functions.)

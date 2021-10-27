@@ -9,7 +9,7 @@ bool cmp(pair<int,int> p1,pair<int,int> p2){
 }
 int main()
 {
-
+    // defining a pair 
     pair<int, int> p;
     p.first = 3;
     p.second = 3;
@@ -18,14 +18,22 @@ int main()
 
     int arr[] = {1, 5, 3, 3, 6, 3, 4, 32, 6, 3, 443, 63, 23};
 
+    // using pair into vector 
     vector <pair<int,int>> v;
+
+    /* we can also defining pair into 2d vector like this  */
+        // vector <vector<pair<int,int>>> v;
 
     for (int i = 0; i < sizeof(arr)/sizeof(arr[0]); i++)
     {
-        pair<int,int> p;
+        /* we can push pair into vector like this manually */
+
+        // pair<int,int> p;
         // p.first = arr[i];
         // p.second = i ;
         // v.push_back(p);
+
+        /* or like this using make_pair function */
 
         v.push_back(make_pair(arr[i],i));
     }

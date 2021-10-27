@@ -23,3 +23,6 @@
 - [x] Strings in C++
 - [x] BitManipulation in C++
 - [x] recursion in C++
+- [x] BackTracking in C++
+- [x] Sorting in C++
+
