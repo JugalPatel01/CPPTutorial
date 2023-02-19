@@ -1,7 +1,7 @@
 /*  Backtracking is an algorithmic-technique for solving reccursive problems by trying to build every possible solution incrementally and
     removing those solutions that fail to satisfy the constraints of the problem at any point of time.*/
 
-// Rat is a Maze problem
+// Rat in a Maze problem
 
 // Rat can move only in right or down direction and we need to reach to ending from starting.
 
