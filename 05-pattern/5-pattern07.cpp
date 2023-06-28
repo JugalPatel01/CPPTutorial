@@ -1,37 +1,44 @@
+/*
+
+  * Print butterfly pattern
+
+  for value 5 :
+
+           *                          *
+           *  *                    *  *
+           *  *  *              *  *  *
+           *  *  *  *        *  *  *  *
+           *  *  *  *  *  *  *  *  *  *
+           *  *  *  *  *  *  *  *  *  *
+           *  *  *  *        *  *  *  *
+           *  *  *              *  *  *
+           *  *                    *  *
+           *                          *
+
+*/
 #include <iostream>
 using namespace std;
 int main()
 {
-  /*
-    butterfly pattern
-  
-      *   *
-      ** **
-      *****
-      *****
-      ** ** 
-      *   *
-  
-  */
 
   int a;
-  cout << "enter the number of stage  ";
+  cout << "enter the number of stage : ";
   cin >> a;
 
   for (int i = 1; i <= a; i++)
   {
     for (int j = 1; j <= i; j++)
     {
-      cout << "*";
+      cout << " * ";
     }
     int space = 2 * a - 2 * i;
     for (int j = 1; j <= space; j++)
     {
-      cout << " ";
+      cout << "   ";
     }
     for (int j = 1; j <= i; j++)
     {
-      cout << "*";
+      cout << " * ";
     }
 
     cout << endl;
@@ -40,16 +47,16 @@ int main()
   {
     for (int j = 1; j <= i; j++)
     {
-      cout << "*";
+      cout << " * ";
     }
     int space = 2 * a - 2 * i;
     for (int j = 1; j <= space; j++)
     {
-      cout << " ";
+      cout << "   ";
     }
     for (int j = 1; j <= i; j++)
     {
-      cout << "*";
+      cout << " * ";
     }
 
     cout << endl;

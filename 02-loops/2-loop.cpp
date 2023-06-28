@@ -1,50 +1,86 @@
+/*
+    Types of Loops
+    1) For Loop
+    2) While Loop
+    3) do-while loop
+
+    - Nested Loop -> loops inside a loop
+
+    - loop controllers : 1) break; 2) continue;
+
+ */
+
 #include <iostream>
 using namespace std;
 int main()
 {
     int a;
+
     cout << "----This is from for loop---------------\n";
-    for (int i = 0; i < 10; i++)
+    cout << endl;
+    for (int i = 0; i < 3; i++)
     {
-        cout << "hello I am for loop "<<i<<""<<endl;
+        cout << "from normal for loop : " << i << endl;
     }
-
-    cout<< "------This is from while loop--------------\n";
-    int i =0; 
-    while(i<10)
+    cout << endl;
+    for (int i = 0, j = 0; i < 8 && j < 9; i++, j += 3)
     {
-        cout<< "hello I am while loop "<<i<<""<< endl;
+        cout << "From hybrid for loop : i = " << i << " & j = " << j << endl;
+    }
+    cout << endl;
+
+    cout << "------This is from while loop--------------\n";
+    cout << endl;
+    int i = 0;
+    while (i < 4)
+    {
+        cout << "From while loop " << i << "" << endl;
         i++;
     }
-    cout<< "----This is from do-while loop-----------------\n";
-    i=0;
-     do{
-        cout<<"hello I am do-while loop" << i << ""<< endl;
-        i++;
-     }
-     while(i<10);
+    cout << endl;
 
-     cout<< "----------loop control-----------(continue)\n";
-    for(int i=0;i<100;i++){
-        if(i%3==0){
+    cout << "----This is from do-while loop-----------------\n";
+    cout << endl;
+    // here in do while loop do part will always runs for the first time
+    // here 0 !< 0 then also do will run for first time.
+    i = 0;
+    do
+    {
+        cout << "From do-while loop " << i << "" << endl;
+        i++;
+    } while (i < 0);
+    cout << endl;
+
+    cout << "----------loop control-----------(continue)\n";
+    cout << endl;
+    for (int i = 0; i < 100; i++)
+    {
+        if (i % 3 == 0)
+        {
             continue;
         }
-        cout<<i<<"  ";
+        cout << i << "  ";
+    }
+    cout << endl;
+
+    cout << "\n----------loop control & nested loops -----------(break)(Is number is prime or not between two numbers)" << endl;
+    cout << endl;
+    int n, m;
+    cout << "Enter the range (starting & ending Number) :  ";
+    cin >> n >> m;
+    for (int num = n; num <= m; num++)
+    {
+        for (i = 2; i < num / 2 + 1; i++)
+        {
+            if (num % i == 0)
+            {
+                cout << num << "is not prime number" << endl;
+                break;
+            }
+        }
+        if (i == num)
+            cout << num << "is prime number" << endl;
     }
 
-     cout<< "\n----------loop control-----------(break)(Is number is prime or not between two numbers)\n";
-     int n,m;
-     cout<<"Enter the range "<<endl;
-     cin>>n>>m; 
-     for(int num=n;num<=m;num++){
-     for( i=2;i<num;i++){
-         if(num%i==0){
-             cout<< "not prime number "<<num<<"  \n"; 
-             break;
-         }
-     }
-      if(i==num)
-         cout<<"prime number "<<num<<"  \n";
-     }    
     return 0;
 }

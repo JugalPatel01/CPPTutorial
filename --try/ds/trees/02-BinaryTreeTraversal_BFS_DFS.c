@@ -26,7 +26,6 @@ struct Node
     struct Node *left;
     struct Node *right;
 };
-struct Node *rootptr;
 
 struct Queue
 {
@@ -45,9 +44,11 @@ void Enqueue(struct Node *data)
         front = rear = temp;
         return;
     }
-
-    rear->next = temp;
-    rear = temp;
+    else if (rear != NULL)
+    {
+        rear->next = temp;
+        rear = temp;
+    }
 }
 
 void Dequeue()
@@ -89,6 +90,7 @@ struct Node *getNode(char c)
     temp->data = c;
     temp->left = NULL;
     temp->right = NULL;
+    return temp;
 }
 
 struct Node *Insert(struct Node *root, char c)
@@ -138,6 +140,7 @@ void Preorder(struct Node *root)
     Preorder(root->left);
     Preorder(root->right);
 }
+
 void Inorder(struct Node *root)
 {
     if (root == NULL)
@@ -146,6 +149,7 @@ void Inorder(struct Node *root)
     printf("%c ", root->data);
     Inorder(root->right);
 }
+
 void Postorder(struct Node *root)
 {
     if (root == NULL)
@@ -157,7 +161,7 @@ void Postorder(struct Node *root)
 
 int main()
 {
-    rootptr = NULL;
+    struct Node *rootptr = NULL;
     rootptr = Insert(rootptr, 'f');
     rootptr = Insert(rootptr, 'j');
     rootptr = Insert(rootptr, 'd');
@@ -181,6 +185,9 @@ int main()
     Inorder(rootptr);
     printf("\nPOSTORDER TREE TRAVERSAL : ");
     Postorder(rootptr);
+
+    free(rootptr);
+    rootptr = NULL;
 
     return 0;
 }

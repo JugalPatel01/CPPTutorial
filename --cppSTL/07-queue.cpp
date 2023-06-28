@@ -1,3 +1,9 @@
+/*
+    Queue
+    -> It follows FIFO(first in first out) property
+    -> It is based on deque
+
+ */
 #include <iostream>
 #include <queue>
 using namespace std;

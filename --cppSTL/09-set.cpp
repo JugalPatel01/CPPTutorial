@@ -1,3 +1,16 @@
+/*
+    Set
+    -> it stores unique data
+    -> stores the values in sorted order.
+    -> elements can only be deleted or inserted but can't be modified.
+    -> it is implemented as binary search tree.
+
+    begin() points to the first element
+    rbegin() points to the last element
+
+    end() points to the last element
+    rend() points to the first element
+ */
 #include <iostream>
 #include <set>
 using namespace std;
@@ -38,7 +51,7 @@ int main()
     }
     cout << endl;
 
-    cout << "5 is present or not " << s.count(5) << endl;
+    cout << "is 5 there in set? : " << s.count(5) << endl;
 
     set<int>::iterator itr = s.find(5);
 

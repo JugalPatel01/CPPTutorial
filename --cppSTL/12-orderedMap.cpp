@@ -1,9 +1,15 @@
+/*
+    * Ordered Map
+    ->  Maps are implemented as binary search trees.
+
+    difference between map and pair
+    -> pair stores two objects but map stores key and values. And keys are unique.
+*/
 #include <iostream>
 #include <map>
 using namespace std;
 int main()
 {
-
     map<int, string> m;
 
     m[1] = "abc";

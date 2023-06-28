@@ -52,7 +52,7 @@
             left-child-index = 2i+1,right-child-index = 2i+2
 
     * Binary serach Tree( BST ) :
-    -> A binary tree in which for ech ndoe, value of all the nodes in left subtree is lesser or equal and vlaue of all the nodes in right subtree is greater.
+    -> A binary tree in which for each node, value of all the nodes in left subtree is lesser or equal and vlaue of all the nodes in right subtree is greater.
     -> in BST all the insert, delete & searching's average time complexity is O(logn) and worst is O(n).We can avoid the worst condition by keep the tree balanced.
 
 */
@@ -72,7 +72,7 @@ struct BstNode *rootPtr;
 
 struct BstNode *GetNewNode(int data)
 {
-    struct BstNode *newNode = (struct BstNode *)malloc(sizeof(struct BstNode *));
+    struct BstNode *newNode = (struct BstNode *)malloc(sizeof(struct BstNode));
     newNode->data = data;
     newNode->left = NULL;
     newNode->right = NULL;
@@ -158,11 +158,11 @@ int FindHeight(struct BstNode *root)
     {
         return -1; // because leaf's both children are of NULL addresses so Height of leaf node is 0.so both children return -1
     }
-    
+
     int num1 = FindHeight(root->left);
     int num2 = FindHeight(root->right);
-	
-    return fmax(num1,num2) + 1;
+
+    return fmax(num1, num2) + 1;
 }
 
 int main()
@@ -178,10 +178,10 @@ int main()
     rootPtr = Insert(rootPtr, 8);
 
     printf("Enter the number to serach in the tree : ");
-    scanf("%d", &num);
-    //num = 8;
+    scanf_s("%d", &num);
+    // num = 8;
 
-    (SearchElement(rootPtr, num)) ? printf("number is present in the tree\n") : printf("number is not present in the tree\n");
+    (SearchElement(rootPtr, num)) ? printf("number %d is present in the tree\n", num) : printf("number is not present in the tree\n");
 
     printf("Maximum element in the tree is : %d\n", FindMaxInTree(rootPtr));
 

@@ -1,10 +1,21 @@
+/*
+    print Hollow square / rectangle pattern
+
+            * * * * *
+            *       *
+            *       *
+            *       *
+            * * * * *
+*/
+
 #include <iostream>
 using namespace std;
 int main()
 {
 
-    //hollow square pattern
+    // hollow square pattern
     int rows, cols;
+    cout << "enter size of rows and columns : ";
     cin >> rows >> cols;
     for (int i = 1; i <= rows; i++)
     {
@@ -12,17 +23,17 @@ int main()
         {
             if (i == 1 || i == rows)
             {
-                cout << "*";
+                cout << "* ";
             }
             else if (j == 1 || j == cols)
             {
-                cout << "*";
+                cout << "* ";
             }
             else
             {
-                cout << " ";
+                cout << "  ";
             }
         }
-        cout<<endl;
+        cout << endl;
     }
 }

@@ -8,14 +8,14 @@ struct Node
     struct Node *left;
     struct Node *right;
 };
-struct Node *rootptr;
 
 struct Node *GetNewNode(int data)
 {
-    struct Node *temp = (struct Node *)malloc(sizeof(struct Node *));
+    struct Node *temp = (struct Node *)malloc(sizeof(struct Node));
     temp->data = data;
     temp->left = NULL;
     temp->right = NULL;
+    return temp;
 }
 
 struct Node *Insert(struct Node *root, int data)
@@ -32,6 +32,7 @@ struct Node *Insert(struct Node *root, int data)
     {
         root->right = Insert(root->right, data);
     }
+    return root;
 }
 
 int IsSubtreeLesser(struct Node *root, int value)
@@ -66,21 +67,37 @@ int IsBinarySearchTree(struct Node *root)
 {
     if (root == NULL)
         return 1;
-    if (IsSubtreeLesser(root->left, root->data) && IsSubtreeLesser(root->right, root->data) && IsBinarySearchTree(root->left) && IsBinarySearchTree(root->right))
+    if (IsSubtreeLesser(root->left, root->data) && IsSubtreeGreater(root->right, root->data) && IsBinarySearchTree(root->left) && IsBinarySearchTree(root->right))
         return 1;
     else
         return 0;
 }
 
+void print_tree(struct Node *root)
+{
+    if (root == NULL)
+    {
+        return;
+    }
+    print_tree(root->left);
+    printf("%d ", root->data);
+    print_tree(root->right);
+}
+
 int main()
 {
-    rootptr = NULL;
+    struct Node *rootptr = NULL;
     rootptr = Insert(rootptr, 5);
     rootptr = Insert(rootptr, 2);
     rootptr = Insert(rootptr, 3);
     rootptr = Insert(rootptr, 7);
 
+    print_tree(rootptr);
+
     if (IsBinarySearchTree(rootptr))
-        printf("This is binary search tree");
+        printf("\nThis is binary search tree");
+
+    free(rootptr);
+    rootptr = NULL;
     return 0;
 }

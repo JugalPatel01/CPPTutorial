@@ -1,25 +1,31 @@
-// Betting game
-// "Jack Queen King" - computer suffles these cards
-// player has to guess te position of queen.
-// if he wins, he takes 3*bet
-// if he looses, he losses the bet amount.
-// palyer has $100 initially
+/*
+    *  Betting game
+    ->  "Jack Queen King" - computer suffles these cards
+    ->  player has to guess te position of queen.
+    ->  if he wins, he takes 3*bet
+    ->  if he looses, he losses the bet amount.
+    ->  player has $100 initially
+ */
 
 #include <iostream>
 #include <stdlib.h>
 #include <math.h>
 #include <time.h>
 using namespace std;
+
 int cash = 100;
+
 void play(int bet)
 {
     /* here we allocate memroy in stack so it never change while we run this program */
 
     // char c[3] = {'J','Q','K'}
 
-    /* here we allocate memory in heap everytime on executing play function.
-    so if we don't free heap memory then it uses more memory everytime while we calling play function and it turns into memory leak.
-    but here we free that used memory at end of play function so this program not increasing used memory in ram it remains constant. */
+    /* 
+        here we allocate memory in heap everytime on executing play function.
+        so if we don't free heap memory then it uses more memory everytime while we calling play function and it turns into memory leak.
+        but here we free that used memory at end of play function so this program not increasing used memory in ram it remains constant. 
+    */
 
     char *c = (char *)malloc(3 * sizeof(char));
 
@@ -54,6 +60,7 @@ void play(int bet)
     }
     free(c);
 }
+
 int main()
 {
     int bet;

@@ -1,15 +1,18 @@
+/*
+
+    * print number in left pyramid
+    for value of 4 :
+    1
+    2 2
+    3 3 3
+    4 4 4 4
+*/
 #include <iostream>
 using namespace std;
 int main()
 {
-    /*
-        1
-        2 2
-        3 3 3
-        4 4 4 4
-*/
     int n;
-    cout << "enter the stage of pyramid";
+    cout << "enter the stage of pyramid : ";
     cin >> n;
     for (int i = 1; i <= n; i++)
     {

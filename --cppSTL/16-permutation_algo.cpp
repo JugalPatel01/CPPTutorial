@@ -6,10 +6,11 @@
 
 #include <iostream>
 #include <vector>
-#include <algorithm> 
+#include <algorithm>
 using namespace std;
 vector<vector<int>> ans;
-int main() {
+int main()
+{
 
     int vector_size;
     cin >> vector_size;
@@ -18,11 +19,11 @@ int main() {
     {
         cin >> i;
     }
-    sort(a.begin(),a.end());
-    do{
+    sort(a.begin(), a.end());
+    do
+    {
         ans.push_back(a);
-    }
-    while(next_permutation(a.begin(),a.end()));
+    } while (next_permutation(a.begin(), a.end()));
 
     for (auto v : ans)
     {
@@ -32,5 +33,5 @@ int main() {
         }
         cout << endl;
     }
-return 0;
+    return 0;
 }

@@ -1,15 +1,20 @@
+/*
+
+    * Print center pyramid
+    for value 5 :
+            1
+           1 2
+          1 2 3
+         1 2 3 4
+        1 2 3 4 5
+
+*/
 #include <iostream>
 using namespace std;
 int main()
 {
-    /*
-           1
-          1 2
-         1 2 3
-        1 2 3 4
-             */
     int n;
-    cout << "enter the rows ";
+    cout << "enter the rows : ";
     cin >> n;
 
     for (int i = 1; i <= n; i++)

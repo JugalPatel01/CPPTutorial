@@ -1,35 +1,33 @@
-#include<iostream>
-#include<queue>
+/*
+    Pointers and array
+
+    -> array is a contigous block of memory and first element is start point of that array
+    -> so we store first element's address in the pointer to access whole array using pointer.
+
+*/
+
+#include <iostream>
+#include <queue>
 using namespace std;
-int main() {
+int main()
+{
 
     int arr[5];
-    printf("%d\n",arr);
+    cout << arr << endl;
+    cout << &arr[0] << endl;
     for (int i = 0; i < 5; i++)
     {
         arr[i] = i;
     }
 
-    int *k ;
+    int *k;
     k = arr;
     for (int i = 0; i < 5; i++)
     {
-        cout<<k<<endl;
-        cout<<*k<<endl;
-        k++;
-      
+        cout << "address : " << k << " / " << (arr + i) << endl;
+        cout << "value : " << *k << " / " << *(arr + i) << endl;
+        k = k + 1; // we can increase the address p = p + 1(size of type of pointer).
     }
-    
-    
-    // int x = 5;
-    // int *p ;
-    // p = &x;
-    // printf("%d\n",p);
-    // cout<<*p<<endl;
-    // p = p +1;
-    // printf("%d\n",p);
-
-
 
     return 0;
 }

@@ -1,3 +1,12 @@
+/* 
+    * Unordered set
+    -> elements can be stored in any order.
+    -> stores only unique values.
+    -> hash-table used to store elements.
+
+    * unordered multiset
+    -> same as unordered set but it allow duplicates in it.
+*/
 #include <iostream>
 #include <unordered_set>
 using namespace std;

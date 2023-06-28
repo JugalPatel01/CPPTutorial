@@ -1,5 +1,9 @@
+/*
+    List
+    -> it is based on a doubly linkedlist.
+ */
 #include <iostream>
-#include <list> // based on doubly linkedlist
+#include <list>
 using namespace std;
 int main()
 {
@@ -32,28 +36,32 @@ int main()
     }
     cout << endl;
 
-    cout<<"size of list "<<l.size()<<endl;
+    cout << "size of list " << l.size() << endl;
 
-    cout<<"copy of list"<<endl;
+    cout << "copy of list" << endl;
 
-    list<int> n(5,100);
+    list<int> n(5, 100);
     list<int> m(l);
 
-    for(int i:n){
-        cout<<i<<" ";
-    }cout<<endl;
-    for(int i:m){
-        cout<<i<<" ";
-    }cout<<endl;
+    for (int i : n)
+    {
+        cout << i << " ";
+    }
+    cout << endl;
+    for (int i : m)
+    {
+        cout << i << " ";
+    }
+    cout << endl;
 
     m.reverse();
-    cout<<"after use of reverse function "<<endl;
+    cout << "after use of reverse function " << endl;
 
-    for(int i:m){
-        cout<<i<<" ";
-    }cout<<endl;
-
-
+    for (int i : m)
+    {
+        cout << i << " ";
+    }
+    cout << endl;
 
     return 0;
 }

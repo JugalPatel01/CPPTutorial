@@ -1,17 +1,22 @@
+/*
+
+    * Print reverse left Number pyramid
+    for value 5 :
+
+        1 2 3 4 5
+        1 2 3 4
+        1 2 3
+        1 2
+        1
+
+*/
 #include <iostream>
 using namespace std;
 int main()
 {
 
-    /*
-    12345
-    1234
-    123
-    12
-    1   
-    */
     int n;
-    cout << "enter the no. of rows";
+    cout << "enter the no. of rows : ";
     cin >> n;
     for (int i = n; i >= 1; i--)
     {

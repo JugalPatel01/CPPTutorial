@@ -1,7 +1,8 @@
-/* Quick Sort */
-
 /*
-    Time complexity 
+
+    * Quick Sort
+
+    Time complexity
 
     Best case : nlog(n)
     worst case : n*n or n**2 or n ^ 2
@@ -47,9 +48,10 @@ int main()
 {
     int arr[5] = {1, 5, 3, 4, 2};
     quickSort(arr, 0, 4);
+    cout << "sorted array is : ";
     for (int i = 0; i < 5; i++)
     {
-        cout << arr[i] << "\t";
+        cout << arr[i] << " ";
     }
     return 0;
 }

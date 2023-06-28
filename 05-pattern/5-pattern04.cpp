@@ -1,14 +1,17 @@
+/*
+        * print 180 degree rotated left pyramid / print right pyramid
+
+        for value of 5 :
+                    *
+                  * *
+                * * *
+              * * * *
+            * * * * *
+*/
 #include <iostream>
 using namespace std;
 int main()
 {
-    /*
-            180 degree rotated pyramid
-               *
-              **
-             ***
-            ****
-*/
     int n;
     cout << "enter the stage of pyramid ";
     cin >> n;
@@ -19,11 +22,11 @@ int main()
         {
             if (j <= n - i)
             {
-                cout << " ";
+                cout << "  ";
             }
             else
             {
-                cout << "*";
+                cout << "* ";
             }
         }
         cout << endl;

@@ -1,8 +1,14 @@
+/*
+    priority queue
+    -> we use priority queue to implement max head and min heap
+    -> if two elements have the same priority, then they are served according to their order in the queue.
+    -> It is based on vector
+
+ */
 #include <iostream>
 #include <queue>
 #include <algorithm>
 using namespace std;
-// priority queue ( max heap, mean heap )
 
 int main()
 {
@@ -23,9 +29,17 @@ int main()
     }
     cout << endl;
 
-
     // min heap
 
+    /*
+        for implementing min heap we use functors
+
+        second parameter is for container
+
+        The third parameter, ‘Comparison Type’ can either be a function or functor (function object) that must have bool as return-type and must have 2 arguments.
+
+        for learning more about functors refer to the 17-functors.cpp in --cppSTL folder
+    */
     priority_queue<int, vector<int>, greater<int>> mini;
     mini.push(5);
     mini.push(6);
@@ -42,6 +56,6 @@ int main()
     }
     cout << endl;
 
-    cout<<"is empty? " << mini.empty()<<endl;
+    cout << "is empty? " << mini.empty() << endl;
     return 0;
 }

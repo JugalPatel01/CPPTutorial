@@ -1,17 +1,20 @@
+/*
+
+    * print left pyramid of alternate ones and zeros
+    for value 5 :
+        1
+        0  1
+        1  0  1
+        0  1  0  1
+        1  0  1  0  1
+
+ */
 #include <iostream>
 using namespace std;
 int main()
 {
-
-    /*
-        1
-        01
-        101
-        0101
-        10101
-    */
     int n;
-    cout << "enter the number of rows ";
+    cout << "enter the number of rows : ";
     cin >> n;
     for (int i = 1; i <= n; i++)
     {

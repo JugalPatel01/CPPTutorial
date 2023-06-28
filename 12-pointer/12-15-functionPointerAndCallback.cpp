@@ -1,16 +1,22 @@
-#include<iostream>
+/*
+    Function pointers and callbacks
+*/
+#include <iostream>
 using namespace std;
-void A(){
+void A()
+{
     printf("Hello");
 }
-void B(void (*ptr)()){
-    ptr (); // call-back function that "ptr" points to
+void B(void (*ptr)()) // function pointer as argumnet
+{
+    ptr(); // call-back function that "ptr" points to
 }
-int main() {
+int main()
+{
 
-// void (*P)() = A;
-// B(P); 
+    // void (*P)() = A;
+    // B(P);
 
-B(A);   // A is callback function
-return 0;
+    B(A); // A is callback function
+    return 0;
 }

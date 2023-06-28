@@ -1,23 +1,25 @@
 # CPPTutorial
 
-**Here you Learn about Most of ~~all~~ Needed concept of C++**
+**From here you can Learn Most of all the Needed concept of C++**
 
-|Topics in This Tutorial|Status|
-|:--- | ---:|
-|Basic Concept| Covered|
-|Object Oriented C++| Not now|
-|Data Structure | Not Now|
-|Standard Template Library(STL) | Covered |
+| Topics in This Tutorial        |  Status |
+| :----------------------------- | ------: |
+| Basic Concept                  | Covered |
+| Object Oriented C++            | Covered |
+| Data Structure                 | Not Now |
+| Standard Template Library(STL) | Covered |
+| Greedy Algorithms              | Not Now |
+| Dynamic Programming            | Not Now |
+| String Algorithms              | Not Now |
 
+_items covered in this tutorial are :_
 
-
-*item covered in this tutorial are :*
-- [x] Datatypes in C++ 
-- [x] Loops in C++ 
-- [x] Switch in C++ 
-- [x] Operators in C++ 
-- [x] Patterns in C++ 
-- [x] Functions in C++ 
+- [x] Datatypes in C++
+- [x] Loops in C++
+- [x] Switch in C++
+- [x] Operators in C++
+- [x] Patterns in C++
+- [x] Functions in C++
 - [x] All types of Arrays in C++
 - [x] Pointers in C++
 - [x] Strings in C++
@@ -25,4 +27,11 @@
 - [x] recursion in C++
 - [x] BackTracking in C++
 - [x] Sorting in C++
-
+- [x] Object Oriented Programming in C++
+- [x] Linkedlist in C++
+- [x] Stack in C++
+- [x] Queue in C++
+- [x] Deque in C++
+- [x] Problems on Data Structure in C++
+- [x] Binary trees in C++
+- [x] Binary Search trees in C++

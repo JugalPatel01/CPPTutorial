@@ -1,10 +1,24 @@
+/*
+
+    * binar_search
+    -> use binary_search to find element in the sorted data structures.
+
+    * lower_bound
+    -> if value is present in the data structure then it return that value's pointer and if it's not present then it next bigger value's  pointer.
+
+    * upper_bound
+    -> if bigger value present in that data strcutre then it returns that value's pointer otherwise it returns last pointer of
+    the data structure. eg. in set it returns set.end() in case if there is no bigger element in the set.
+
+    * max , min , swap , reverse , rotate , sort , find , count , transform , next_permutation , prev_permutation
+*/
+
 #include <iostream>
 #include <algorithm>
 #include <vector>
 using namespace std;
 int main()
 {
-
     vector<int> v;
     v.push_back(1);
     v.push_back(3);
