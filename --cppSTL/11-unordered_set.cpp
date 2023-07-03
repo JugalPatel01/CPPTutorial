@@ -1,4 +1,4 @@
-/* 
+/*
     * Unordered set
     -> elements can be stored in any order.
     -> stores only unique values.
@@ -14,7 +14,7 @@ int main()
 {
 
     unordered_set<int> us;
-    us.insert(5);
+    us.insert(5); // time complexity O(1)
     us.insert(1);
     us.insert(2);
     us.insert(3);
@@ -28,7 +28,7 @@ int main()
     }
     cout << endl;
 
-    us.erase(us.find(3));
+    us.erase(us.find(3)); // time complexity O(1)
     for (auto i : us)
     {
         cout << i << " ";

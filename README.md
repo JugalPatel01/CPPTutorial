@@ -35,3 +35,6 @@ _items covered in this tutorial are :_
 - [x] Problems on Data Structure in C++
 - [x] Binary trees in C++
 - [x] Binary Search trees in C++
+- [x] Probelms on algorithms in C++(binary search,sliding windows)
+- [x] heaps in C++
+- [x] hashing in C++

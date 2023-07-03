@@ -1,0 +1,6 @@
+/*
+
+    * Greedy algorithms
+
+    -> 
+ */

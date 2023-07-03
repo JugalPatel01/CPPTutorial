@@ -3,7 +3,7 @@
     -> it stores unique data
     -> stores the values in sorted order.
     -> elements can only be deleted or inserted but can't be modified.
-    -> it is implemented as binary search tree.
+    -> it is implemented as red-black tree (one kind of self balancing binary search tree).
 
     begin() points to the first element
     rbegin() points to the last element
@@ -18,7 +18,7 @@ int main()
 {
 
     set<int> s;
-    s.insert(1);
+    s.insert(1);    // time complexity O(log(n))
     s.insert(1);
     s.insert(5);
     s.insert(2);
@@ -42,6 +42,7 @@ int main()
     it++;
     s.erase(s.begin());
 
+    // erase function is works with both direct values and iterator
     s.erase(it);
     // we can also do s.earse(2);
 
