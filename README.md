@@ -6,9 +6,9 @@
 | :----------------------------- | ------: |
 | Basic Concept                  | Covered |
 | Object Oriented C++            | Covered |
-| Data Structure                 | Not Now |
+| Data Structure                 | Covered |
 | Standard Template Library(STL) | Covered |
-| Greedy Algorithms              | Not Now |
+| Greedy Algorithms              | Covered |
 | Dynamic Programming            | Not Now |
 | String Algorithms              | Not Now |
 
@@ -38,3 +38,5 @@ _items covered in this tutorial are :_
 - [x] Probelms on algorithms in C++(binary search,sliding windows)
 - [x] heaps in C++
 - [x] hashing in C++
+- [x] greedy algorithms in C++
+- [x] graph algorithms in C++

@@ -10,13 +10,25 @@
     -> if bigger value present in that data strcutre then it returns that value's pointer otherwise it returns last pointer of
     the data structure. eg. in set it returns set.end() in case if there is no bigger element in the set.
 
-    * max , min , swap , reverse , rotate , sort , find , count , transform , next_permutation , prev_permutation
+    * max , min , swap , reverse , rotate , sort , find , count , transform , next_permutation , prev_permutation, all_of,
+      any_of, none_of, min_element, max_element
 */
 
 #include <iostream>
 #include <algorithm>
 #include <vector>
+#include <numeric>
 using namespace std;
+
+bool cmp(int a, int b)
+{
+    // for accending order
+    return a < b;
+
+    // for decreasing order
+    // return a>b;
+}
+
 int main()
 {
     vector<int> v;
@@ -60,11 +72,53 @@ int main()
     }
     cout << endl;
 
+    /*
+    // if we wan't vector sorted in accending order then return a<b; (means a always have to less);
+        bool cmp(int a, int b){
+            if(a<b){
+                return true;
+            }else{
+                return false;
+            }
+        }
+
+        // abvoe function is for sorting in accending order.
+
+     */
     sort(v.begin(), v.end()); // sort  --> based on intro sort (mixture of)( quick sort, heap sort, insertion sort)
+
+    // here we can pass 3rd argument as custom comparator. that return boolean according how we wan't our sorted array.
+    // sort(v.begin(), v.end(),cmp);
+
     for (auto i : v)
     {
         cout << i << " ";
     }
     cout << endl;
+
+    // min_element function
+    auto minptr = min_element(v.begin(), v.end());
+    cout << "minimum value in the array is : " << *minptr << endl;
+
+    // max_element function
+    auto maxptr = max_element(v.begin(), v.end());
+    cout << "minimum value in the array is : " << *maxptr << endl;
+
+    // accumlate function
+    // argument in accumulate function is starting pointer, next pointer of ending pointer, and initial value
+    int sum = accumulate(v.begin(), v.end(), 0);
+    cout << "sum of whole array is : " << sum << endl;
+
+    // all_of function
+    cout << "are all element on a vector greater then 0 ? : " << all_of(v.begin(), v.end(), [](int x)
+                                                                        { return x > 0; })
+         << endl;
+    // rather then passing lambda function we can use inbuilt function is_positive
+
+    // any_of function
+    cout << "is there any element which is greater then 50 ? : " << any_of(v.begin(), v.end(), [](int x)
+                                                                           { return x > 50; })
+         << endl;
+
     return 0;
 }
