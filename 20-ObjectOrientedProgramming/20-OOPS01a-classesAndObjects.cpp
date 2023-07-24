@@ -1,7 +1,11 @@
 /*
-    * Class : it is a user defined datatype to make a template for storing the same type of the data(we can say it as a container for variables and methods)
+    * Class : it is a user defined datatype to make a template for storing the same type of the data(we can say it as a
+              container for variables and methods)
 
     * Object : it is a runtime instance of the class.
+
+    * Constructor : It is a special member function with the same name as of the class name. It used to initialize the object
+                    of its class and it is invoked automatically when object of the class is initialized.
 
     class human{
 
@@ -10,7 +14,7 @@
         int hand;
         int age;
         bool gender;
-        string workingOfHand(qaw){
+        string workingOfHand(){
             return "to pick something and more";
         }
     }
@@ -54,8 +58,12 @@ public:
         cout << "call from the default constructor" << endl;
     } // default constructor
 
-    human(string s)
+    human(string s, string s2 = "not given") // we can pass default values in the constructor like shown
     {
+        if (s == "")
+        {
+            name = s2;
+        }
         name = s;
         cout << "call from the parameterised constructor" << endl;
     } // parameterised constructor
@@ -67,26 +75,26 @@ public:
         gender = a.gender;
         cout << " call from the copy constructor" << endl;
     } // copy constructor in this we pass address of the class in the parameter.
-      /*
-  
-  
-      -> for making a instances of class we have to make constructors public.
-  
-       * there are two types of copy constructors
-       1) defalut copy constructor 2) defined copy constructor
-  
-       deafult copy constructor doing shallow copy and defined copy constructor doing deep copy.
-       shallow copy : The object and its copy, point to the same memory address. If we make a change
-                      in its copy it gets changed in the main copy as well and vice versa.
-       deep copy : The object and its copy, point to different addresses in the memory. If we make a
-                      change in its copy it will not get changed in the main copy and vice versa.
-  
-       so In shallow copy changes made in the copied object also reflect the original object.
-  
-       for more about shallow and deep copy check out on below link
-       https://www.geeksforgeeks.org/difference-between-shallow-and-deep-copy-of-a-class/
-  
-      */
+    // here if we don't make copy constructor then compiler itself make on copy constructor.
+
+    /*
+    -> for making a instances of class we have to make constructors public.
+
+     * there are two types of copy constructors
+     1) defalut copy constructor 2) defined copy constructor
+
+     deafult copy constructor doing shallow copy and defined copy constructor doing deep copy.
+     shallow copy : The object and its copy, point to the same memory address. If we make a change
+                    in its copy it gets changed in the main copy as well and vice versa.
+     deep copy : The object and its copy, point to different addresses in the memory. If we make a
+                    change in its copy it will not get changed in the main copy and vice versa.
+
+     so In shallow copy changes made in the copied object also reflect the original object.
+
+     for more about shallow and deep copy check out on below link
+     https://www.geeksforgeeks.org/difference-between-shallow-and-deep-copy-of-a-class/
+
+    */
 
     ~human()
     {
@@ -133,8 +141,8 @@ int main()
     a.gender = 0; // 0 for male and 1 for female
 
     // for multiple objects we can define a array of human class datatype
-    human arr[3];
-    for (int i = 0; i < 3; i++)
+    human arr[2];
+    for (int i = 0; i < 2; i++)
     {
         string sname;
         int atemp;
@@ -150,13 +158,14 @@ int main()
         arr[i].gender = gtemp;
     }
 
-    for (int i = 0; i < 3; i++)
+    for (int i = 0; i < 2; i++)
     {
         arr[i].printInfo();
     }
 
     // accessing parameterised constructor
     human x("x");
+    // human x = human("x");        // these both are valid ways to initialize the constructor.
     x.age = 23;
     x.gender = 0;
 

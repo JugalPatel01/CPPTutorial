@@ -9,7 +9,7 @@
 | Data Structure                 | Covered |
 | Standard Template Library(STL) | Covered |
 | Greedy Algorithms              | Covered |
-| Dynamic Programming            | Not Now |
+| Dynamic Programming            | Covered |
 | String Algorithms              | Not Now |
 
 _items covered in this tutorial are :_
@@ -40,3 +40,5 @@ _items covered in this tutorial are :_
 - [x] hashing in C++
 - [x] greedy algorithms in C++
 - [x] graph algorithms in C++
+- [x] Dynamic Programming in C++
+- [x] Tries in C++

@@ -1,43 +1,70 @@
-Time complexity
+### Types of notations for representing complexity: 
 
-int n;
-cin>>n;
-int a=0;
-for(int i=1;i<=n;i++){
-    a=a+1;
-}
+1. O-notation(Big-O) : It is used to denote asymptotic tight upper bound. 
+-> For a given function g(n), we denote it by O(g(n)). 
+-> Pronounced as “big-oh of g of n”. 
+-> mathematically : 0 ≤ f(n) ≤ c*g(n),    where c > 0 & n ≥ 1.
+-> It also known as worst case time complexity as it denotes the upper bound in which algorithm terminates.
 
-here time complexity is directly propotional to the n. because of the for loop.
+2. o-notation(Little-o) : it is used to describe an loose upper bound (upper bound which cannot be tight).
+-> For a given function g(n), we denote it by o(g(n)).
+-> Pronounced as "little-oh of g of n".
+-> mathematically : 0 ≤ f(n) < c*g(n),    where c > 0 & n ≥ 1.
+NOTE : Little o is a rough estimate of the maximum order of growth whereas Big-Ο may be the actual order of growth. 
 
-In the above example space complexity is constant.because it is not dependent on input from user .
+3. Ω-notation: It is used to denote asymptotic tight lower bound.
+ -> For a given function g(n), we denote it by Ω(g(n)). 
+ -> Pronounced as “big-omega of g of n”. 
+ -> mathematically : 0 ≤ c*g(n) ≤ f(n),    where c > 0 & n ≥ 1.
+ -> It also known as best case time complexity as it denotes the lower bound in which algorithm terminates.
 
-space complexity:
-Space complexity of an algorithm quantifies the amount of time taken by a program to run as a function of length of the input.
-It is directly proportional to the largest memory your program acquires at any instance during run time.
-For example: int consumes 4 bytes of memory.
+4. ω-notation :  It is used to denote asymptotic loose lower bound(lower bound which cannot be tight).
+ -> For a given function g(n), we denote it by Ω(g(n)). 
+ -> Pronounced as “little-omega of g of n”. 
+ -> mathematically : 0 ≤ c*g(n) < f(n),    where c > 0 & n ≥ 1.
+NOTE : Little ω is a rough estimate of the minimum order of growth whereas Big-Ο may be the actual order of growth. 
 
-
-NOTE: in array[n] n is dependent on user so it's space complexity is directly propotional to n.
-
-Types of notations
-
-1. O-notation: It is used to denote asymptotic upper bound. For a given function g(n), we denote it by O(g(n)). 
-Pronounced as “big-oh of g of n”. 
-It also known as worst case time complexity as it denotes the upper bound in which algorithm terminates.
-
-2. Ω-notation: It is used to denote asymptotic lower bound.
- For a given function g(n), we denote it by Ω(g(n)). 
- Pronounced as “big-omega of g of n”. 
- It also known as best case time complexity as it denotes the lower bound in which algorithm terminates.
-
-3. Θ-notation: It is used to denote the average time of a program.
-
+5. Θ-notation: it encloses the function from above and below
+ -> For a given function g(n), we denote it by Θ(g(n)). 
+-> mathematically : 0 ≤ c1*g(n) ≤ f(n) ≤ c2*g(n),    where c1, c2 & n ≥ 1. 
+-> It is used to denote the average time of a program.
 
 NOTE: It follows the following order in case of time complexity:
 
-O(nn) > O(n!) > O(n3) > O(n2) > O(n.log(n)) > O(n.log(log(n))) > O(n) > O(sqrt(n)) > O(log(n)) > O(1)
+      O(nⁿ) > O(n!) > O(n³) > O(n²) > O(n*log(n)) > O(n*log(log(n))) > O(n) > O(sqrt(n)) > O(log(n)) > O(1)
 
-Note: Reverse is the order for better performance of a code with corresponding time complexity, i.e. a program with less time complexity is more
-efficient.
+Note: Reverse is the order for better performance of a code with corresponding time complexity, i.e. a program with 
+      less time complexity is more efficient.
+
+
+# Time complexity
+
+-> Time taken by the program to execute.
+-> before we use actual time to measure time complexity but program execution is based on processor and other hardware component
+   so, for different processors we have to measure different time to execute the program. so it's a very haptic task to do.
+-> to solve above problem we change our measuring parameter from actual time to input size.
+-> so according to input size we measure time required for execution of program.
+
+** example :  
+int n;          //  for declaring varialbe takes time w.r.t. input size is : O(1)
+cin>>n;         // for taking input once take time in terms of input size is : O(1)
+int a=0;        // for assinging value to the variable takes time w.r.t. input size is : O(1)
+for(int i=1;i<=n;i++){      // here we check the condition for given input so it takes time w.r.t. input size is : O(n+1)      
+    a=a+1;             // for addition it takes time : O(n)
+}
+
+-> so in above example, time to execute program w.r.t. input size is directly propotional to the n(size of an input)
+
+-> In the above example space complexity is constant because For any number of input we will take these much space only.
+   so it is not dependent on the user's input. 
+
+# Space complexity 
+
+-> Space complexity of an algorithm quantifies the amount of time taken by a program to run as a function of length of the input.
+   It is directly proportional to the largest memory your program acquires at any instance during run time.
+   For example: int consumes 4 bytes of memory.
+
+NOTE: in array[n] n is dependent on user so it's space complexity is directly propotional to n.
+
 
 
