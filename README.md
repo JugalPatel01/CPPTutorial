@@ -10,7 +10,7 @@
 | Standard Template Library(STL) | Covered |
 | Greedy Algorithms              | Covered |
 | Dynamic Programming            | Covered |
-| String Algorithms              | Not Now |
+| String Algorithms              | Covered |
 
 _items covered in this tutorial are :_
 
@@ -24,7 +24,7 @@ _items covered in this tutorial are :_
 - [x] Pointers in C++
 - [x] Strings in C++
 - [x] BitManipulation in C++
-- [x] recursion in C++
+- [x] Recursion in C++
 - [x] BackTracking in C++
 - [x] Sorting in C++
 - [x] Object Oriented Programming in C++
@@ -36,9 +36,10 @@ _items covered in this tutorial are :_
 - [x] Binary trees in C++
 - [x] Binary Search trees in C++
 - [x] Probelms on algorithms in C++(binary search,sliding windows)
-- [x] heaps in C++
-- [x] hashing in C++
-- [x] greedy algorithms in C++
-- [x] graph algorithms in C++
+- [x] Heaps in C++
+- [x] Hashing in C++
+- [x] Greedy algorithms in C++
+- [x] Graph algorithms in C++
 - [x] Dynamic Programming in C++
 - [x] Tries in C++
+- [x] String_algorithm in C++
