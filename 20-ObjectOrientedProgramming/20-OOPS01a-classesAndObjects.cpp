@@ -40,6 +40,25 @@
     -> eg. of dynamic binding : virtual functions
 */
 
+/*
+    # size of class object is depended on various factors which are shown below :
+    1) size of all non-static data members (because static variables are not part of class object)
+    2) order of data members (it is based on compiler optimization)
+      a> suppose we declare variable in char ,int ,int order then it takes 12 bytes because Even though char will consume only 1
+         byte,4 bytes will be allocated for it, and the remaining 3 bytes will be wasted (holes).
+      -> This is because the next member is an int, which takes 4 bytes.if we don't go to the next (4th) byte for storing this
+          integer member, the memory access/modify cycle for this integer will be 2 read cycles
+      b> if we declare variable in int,int,char order then it takes 9 bytes.
+    3) byte alignment or byte padding
+    4) size of it's immediate base class
+    5) the existence of virtual functions
+    6) compiler being used
+    7) Mode of inheritance
+
+
+    for more about class object memory visit : https://www.cprogramming.com/tutorial/size_of_class_object.html
+ */
+
 #include <iostream>
 #include <string.h>
 using namespace std;
