@@ -2,7 +2,7 @@
 
     * Place elements to Maximise Minimum Distance
     Q : Given is an array with n elements that represents n positions along a straight line. Find K elements such
-        that the minimum distance between any 2 elements is the maximmum possible.
+        that the minimum distance between any 2 elements is the maximum possible.
 
     i/p : [11, 2, 7, 5, 1, 12]          k = 3
     o/p :

@@ -1,17 +1,26 @@
-#include<iostream>
+#include <iostream>
 using namespace std;
-int main() {
-int n;
-cin>>n;
-int array[n];
+int main()
+{
+    int n;
+    cout << "Enter total no. of elements in array : ";
+    cin >> n;
+    int array[n];
 
-for(int i=0;i<n;i++){
-    int x;
-    cin>>x;
-    array[i]=x;
-}
-for(int i=0;i<n;i++)
-cout<<array[i]<<" ";
+    cout << "Enter elements in the array : ";
+    for (int i = 0; i < n; i++)
+    {
+        int x;
+        cin >> x;
+        array[i] = x;
+    }
 
-return 0;
+    cout << "elements in array are : ";
+    for (int i = 0; i < n; i++)
+    {
+        cout << array[i] << " ";
+        cout << i[array] << "\t";
+    }
+
+    return 0;
 }
