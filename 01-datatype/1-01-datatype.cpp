@@ -22,6 +22,8 @@
     - Enum
     - Typedef
 
+    To learn more about datatypes visit : https://cplusplus.com/doc/tutorial/variables/
+
  */
 
 #include <iostream>

@@ -1,19 +1,35 @@
 /*
    NOTE:--- must watch operator precendence on https://en.cppreference.com/w/cpp/language/operator_precedence
 
-    relational operator ==,!=,>,<,>=,<=
+    P - postfix/parenthesis () , [] , ++ , --   (post increment, post decrement)
 
-    logical operator &&,||,!
+    U - uninary operator + , - , typeof(), sizeof(), *(pointer) , &(reference opeartor) , ++,-- (preincrement, predecrement)
 
-    binary opertors +,-,*,/,%
+    M - multiplicative operator(binary operator) *, / , %
 
-    uninary operator ++,--   These have two types 1) preincrementer and 2) postincrementer
+    A - additive operator(binary operator) + , -
 
-    bitwise operator & and,| or,^ xor ,~ ones ,<< left shift,>> right shift
+    S -shift operator <<(left shift),>>(right shift)
 
-    assignment operators =,+=,-=,*=,/=
+    R - relational operator >,<,>=,<=
 
-    miscellaneous opertors sizeof() --> userdefined operator,condition?x:y --> ternary operator
+    E - equality operator ==,!=
+
+    B - bitwise opertors & (bitwise and), ^(bitwise xor) , |(bitwise or)
+
+    L - logical operator && , ||
+
+    T - Ternary opeartor ? : (eg. condition?x:y)
+
+    A - assignment operators =,+=,-=,*=,/=
+
+    comma opeartor ,
+
+    operator precedence 
+    (pumas)    (reb) (lee) (tactical)
+    P U M A S  R E B   L     T A C      => left to right precedence
+
+    T(ternary) A(assignment) U(uninary) ^/ **(exponential) => right to left precedence
 
     cast operator --> convert one data type to another e.g. char ch='a';--> gives  (int)ch=97;
 

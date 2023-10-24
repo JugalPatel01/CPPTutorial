@@ -1,7 +1,11 @@
 /*
-    List
+    # List
     -> it is based on a doubly linkedlist.
- */
+
+    To learn more about list visit : https://cplusplus.com/reference/list/list/
+
+*/
+
 #include <iostream>
 #include <list>
 using namespace std;
@@ -17,45 +21,46 @@ int main()
     l.push_back(12);
     l.push_front(0);
 
+    cout << "Initially list is : ";
     for (int i : l)
     {
         cout << i << " ";
     }
     cout << endl;
 
-    cout << "front " << l.front() << endl;
-    cout << "back " << l.back() << endl;
-    cout << "empty or not " << l.empty() << endl;
+    cout << "Front of list l : " << l.front() << endl;
+    cout << "Back of list l : " << l.back() << endl;
+    cout << "List l is empty or not ? " << l.empty() << endl;
 
     l.erase(l.begin());
 
-    cout << "after erase" << endl;
+    cout << "After erase element from begining of the list : ";
     for (int i : l)
     {
         cout << i << " ";
     }
     cout << endl;
 
-    cout << "size of list " << l.size() << endl;
+    cout << "Size of list l : " << l.size() << endl;
 
-    cout << "copy of list" << endl;
-
+    cout << "By default initialization of list with 5 times 100 value : ";
     list<int> n(5, 100);
-    list<int> m(l);
-
     for (int i : n)
     {
         cout << i << " ";
     }
     cout << endl;
+
+    cout << "Copy of list l in list m : " ;
+    list<int> m(l);
     for (int i : m)
     {
         cout << i << " ";
     }
     cout << endl;
 
+    cout << "After using reverse function list m will be : ";
     m.reverse();
-    cout << "after use of reverse function " << endl;
 
     for (int i : m)
     {

@@ -1,4 +1,7 @@
 /*
+
+    # functors
+
     * what is functors?
     -> A functor is a C++ class that acts like a function or function pointer.
     -> Functors are called using the same old function call syntax.
@@ -12,7 +15,9 @@
 
     -> greater<int>(), plus<int>(), multiplies<int>()
 
-    for more about inbuilt functors visit https://en.cppreference.com/w/cpp/utility/functional
+    for more about inbuilt functors visit
+                                        : https://en.cppreference.com/w/cpp/utility/functional
+                                        : https://cplusplus.com/reference/functional/function/function/
 
  */
 #include <iostream>
@@ -47,17 +52,17 @@ int main()
 
     auto fn1 = &mul_val;
     int x = 12;
-    cout << "multiply " << x << " with 10 : ";
+    cout << "Multiply " << x << " with 10 : ";
     fn1(x);
     cout << endl;
 
-    cout << "print all the values in array : ";
+    cout << "Print all the values in array : ";
     change_all(arr, n, print_val);
 
-    cout << "multiply all the values of array with 10 : ";
+    cout << "Multiply all the values of array with 10 : ";
     change_all(arr, n, mul_val);
 
-    cout << "finally modified array is : ";
+    cout << "Finally modified array is : ";
     for (int i = 0; i < n; i++)
     {
         cout << arr[i] << " ";

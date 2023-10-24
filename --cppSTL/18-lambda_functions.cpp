@@ -33,7 +33,7 @@ int main()
 
     int pass_in_lambda = 28;
 
-    cout << "print all the values of an array with the use of lambda function : " << endl;
+    cout << "Print all the values of an array with the use of lambda function : " << endl;
 
     auto lambda_func = [&pass_in_lambda](int value)
     { cout << " " << value + pass_in_lambda; };
@@ -45,7 +45,7 @@ int main()
     auto x = find_if(values.begin(), values.end(), [](int val)
                      { return val > 3; });
 
-    cout << "first value greater then 3 in given vector is : " << *x << endl;
+    cout << "First value greater then 3 in given vector is : " << *x << endl;
 
     return 0;
 }

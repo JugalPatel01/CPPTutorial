@@ -7,6 +7,8 @@
 
     NOTE : if for mingw compilers if below code is not working then try it on https://www.onlinegdb.com/fork/ryYiG5i3z#
 
+    To learn more about multithreading visit : https://cplusplus.com/reference/multithreading/
+
  */
 
 #include <iostream>
@@ -26,7 +28,7 @@ void print_all(int start, int end)
 int main()
 {
     // it print all the number at once after 5 seconds
-    cout << "printing without flush : ";
+    cout << "Printing without flush : ";
     for (int i = 1; i <= 5; i++)
     {
         cout << i << " ";
@@ -34,7 +36,7 @@ int main()
     }
 
     // it will print number after each second.
-    cout << "printing with flush : ";
+    cout << "Printing with flush : ";
     for (int i = 1; i <= 5; i++)
     {
         cout << i << " " << flush;

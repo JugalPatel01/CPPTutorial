@@ -1,13 +1,30 @@
 In C++
 
 --> To minimize the potential for errors, C++ has adopted the convention of using header files to contain declarations.
-    You make the declarations in a header file, then use the #include directive in every .cpp file or other header file that requires that declaration.
+    You make the declarations in a header file, then use the #include directive in every .cpp file or other header file that 
+    requires that declaration.
 
 --> iostream is a header file that allows us to use input and output.
 
 --> bits/stdc++.h is a header file that import every single c++ header file.
 
-(disadvantage of using bits/stdc++.h header file is it increases compilation time because it has to search through every possible functions.)
+(disadvantage of using bits/stdc++.h header file is it increases compilation time because it has to search through every 
+possible functions.)
 
---> for more about stl libraries visit https://cplusplus.com/reference/
+--> #include <filename> -> the preprocessor searches in an implementation-defined manner, normally in directories 
+                           pre-designated by the compiler/IDE. This method is normally used to include header files for the C 
+                           standard library and other header files associated with the target platform.
+
+    #include "filename" -> the preprocessor also searches in an implementation defined manner, but one that is normally used to 
+                           include programmer-defined header files and typically includes same directory as the file containing 
+                           the directive.
+
+--> To learn more about "" and <> refers : https://gcc.gnu.org/onlinedocs/cpp/Search-Path.html
+                                         : https://cplusplus.com/doc/tutorial/preprocessor/   
+
+
+--> To learn more about STL libraries visit : https://cplusplus.com/reference/
+
+--> To learn about basic of cpp visit : https://en.cppreference.com/w/cpp/language
+                                      : https://cplusplus.com/doc/tutorial/
 

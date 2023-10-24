@@ -1,6 +1,6 @@
 /*
 
-    * variables
+    # variables
 
     -> variables are name given to the memory locations.
     -> variable are case sensitive and contains letters, digits and underscores.
@@ -16,6 +16,50 @@
                           of variable for all the instances.
                           They are created at the start of the program execution and distroy with program execution ends.
 
+    To learn more about variables visit : https://cplusplus.com/doc/tutorial/variables/
+
+    # storage classes
+
+    -> The storage class specifiers are a part of the declaration syntax. Together with the scope of the name, they control two
+       properties of the name : 1) its storage duration 2) it's linkage.
+    -> There are totoal 6 types of storage classes.
+            1) auto/ no specifiers : automatic storage duration.
+                    scope : local
+                    default value : garbage value
+                    Memory location : RAM
+                    lifetime : Till the end of its scope
+
+            2) register : automatic storage duration. Also hints to the compiler to place the object in the processor's register 
+                          for faster access.
+                    scope : local
+                    default value : garbage value
+                    Memory location : register in CPU or RAM
+                    lifetime : Till the end of its scope
+
+            3) static : static or thread storage duration and internal linkage (or external linkage for static class members not 
+                        in an anonymous namespace.)
+                    scope : local
+                    default value : 0
+                    Memory location : RAM
+                    lifetime : Till the end of the program
+
+            4) extern : static or thread storage duration and external linkage.
+                    scope : Global
+                    default value : 0
+                    Memory location : RAM
+                    lifetime : Till the end of the program
+
+            5) thread_local : thread stoage duration.
+                    Memory location : RAM
+                    lifetime : Till the end of its thread
+
+            6) mutable : make variable constant volatile. (doesn't affact storage duration or linkage)
+
+    NOTE : global or namespace scope is allocated for the entire duration of the program and stored as static storage.
+
+    To learn more about storage classes visit
+                                              : https://www.geeksforgeeks.org/storage-classes-in-c-with-examples/
+                                              : https://en.cppreference.com/w/cpp/language/storage_duration
 
 */
 
@@ -44,7 +88,8 @@ int main()
     int x = 10; // local or scope variable and it's scope is only for main variable
     // we can't use above variable outside main function.
     {
-        int y = 20;
+        // here we can't change y because it has mutable storage class
+        const int y = 20;
         cout << "value of x & y is : " << x << "  &  " << y << endl;
     }
 

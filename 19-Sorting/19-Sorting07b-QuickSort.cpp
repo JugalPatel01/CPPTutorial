@@ -1,6 +1,6 @@
 /*
 
-    # Quick Sort (Method 1)
+    # Quick Sort (Method 2)
 
 
     * Time complexity :
@@ -24,18 +24,32 @@ void swap(int arr[], int i, int j)
 
 int partition(int arr[], int l, int r)
 {
-    int pivot = arr[r];
-    int i = l - 1;
-    for (int j = l; j < r; j++)
+    // it can be any element in the array. Here we are taking first element.
+    int pivot = arr[l];
+    int i = l;
+    int j = r;
+    while (i < j)
     {
-        if (arr[j] < pivot)
+        // move right till we get bigger element then pivot element
+        while (arr[i] <= pivot && i <= r - 1)
         {
             i++;
+        }
+        // move left till we get bigger element then pivot element
+        while (arr[j] > pivot && j >= l + 1)
+        {
+            j--;
+        }
+
+        // if we are not on the correct position of pivot element then swap both element which are on i and j index.
+        // so that we get smaller element on left side of pivot element and greater elements on right side of pivot element.
+        if (i < j)
+        {
             swap(arr, i, j);
         }
     }
-    swap(arr, i + 1, r);
-    return i + 1;
+    swap(arr, j, l);
+    return j;
 }
 
 void quickSort(int arr[], int l, int r)

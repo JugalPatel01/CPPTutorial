@@ -14,7 +14,7 @@
 
 _# items covered in this tutorial are :_
 
-- [x] <a href="https://github.com/JugalPatel01/CPPTutorial/tree/main/--cppSTL" style="color: red; font-weight: bold;">STL(standard template library) in C++</a>
+- [x] <a href="https://github.com/JugalPatel01/CPPTutorial/tree/main/--cppSTL" style="color: red; font-weight: bold;">STL (standard template library) in C++</a>
 
 - [x] [Datatypes in C++](https://github.com/JugalPatel01/CPPTutorial/tree/main/01-datatype)
 - [x] [Loops in C++](https://github.com/JugalPatel01/CPPTutorial/tree/main/02-loops)
@@ -54,4 +54,5 @@ _# items covered in this tutorial are :_
 - [x] [Number theory in C++](https://github.com/JugalPatel01/CPPTutorial/tree/main/36-Number_theory)
 - [x] [Matrix exponentiation in C++](https://github.com/JugalPatel01/CPPTutorial/tree/main/37-Matrix_exponentiation)
 - [x] [Segment trees in C++](https://github.com/JugalPatel01/CPPTutorial/tree/main/38-segment_trees)
-<!-- - [x] [Segment trees in C++]() -->
+- [x] [fenwick trees in C++](https://github.com/JugalPatel01/CPPTutorial/tree/main/39-fenwick_trees)
+- [x] [Square root decomposition in C++](https://github.com/JugalPatel01/CPPTutorial/tree/main/40-square_root_decomposition)

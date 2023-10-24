@@ -1,20 +1,24 @@
 /*
-    stack follow LIFO structure
-    -> It is based on deque
+    # Stack
+    -> Stack follows LIFO(last in first out) structure
+    -> Stack can be implemented using vector, deque, linked list. but generally It is based on deque.
 
     * operations of stack
     -> push()
     -> pop()
     -> top()
     -> empty()
-    -> swap()
+    -> swap()     ~> for swapping two stacks.
     -> emplace()
 
     emplace -> emplace is used to construct object in-place and avoid unnecessary copy of objects.
             -> insert and emplace are equal for premetive data types but when we deal with heavy objects we should use emplace.
 
-    for learn more about initialisation list check out 20-OOPS02c-diamond_problem.cpp in 20-ObjectOrientedProgramming folder.
- */
+    To learn more about initialisation list check out 20-OOPS02c-diamond_problem.cpp in 20-ObjectOrientedProgramming folder.
+
+    To learn more about stack visit : https://cplusplus.com/reference/stack/stack/
+
+*/
 
 #include <iostream>
 #include <stack>
@@ -47,32 +51,41 @@ int main()
     s2.push(9);
     s2.push(10);
 
-    cout << "size of stack s1 :" << s1.size() << endl;
-    cout << " Top element of s1:" << s1.top() << endl;
+    cout << "Size of stack s1 : " << s1.size() << endl;
+    cout << "Top element of s1 : " << s1.top() << endl;
 
     s1.pop();
-    cout << " Top element of s1 : " << s1.top() << endl;
+    cout << "Top element of s1 : " << s1.top() << endl;
     s1.pop();
     s1.pop();
-    cout << " Top element of s1 : " << s1.top() << endl;
+    cout << "Top element of s1 : " << s1.top() << endl;
 
-    cout << "check for emptiness of stack s1 : " << s1.empty() << endl;
+    cout << "Check whether stack s1 is empty or not ? " << s1.empty() << endl;
 
-    cout << "size of stack s1 : " << s1.size() << endl;
+    cout << "Size of stack s1 : " << s1.size() << endl;
 
-    cout << "before swapping size of s1 : " << s1.size() << "\tsize of s2 : " << s2.size() << endl;
+    cout << "Before swapping size of s1 : " << s1.size() << "\tsize of s2 : " << s2.size() << endl;
     s1.swap(s2);
-    cout << "after swapping size of s1 : " << s1.size() << "\tsize of s2 : " << s2.size() << endl;
+    cout << "After swapping size of s1 : " << s1.size() << "\tsize of s2 : " << s2.size() << endl;
 
-    // emplace
+    // Emplace
+
+    cout << "Before using emplace in stack insertion : " << endl;
 
     stack<A> a_stack;
     A b(10);
-    // here we made b object and constructor called and then we copied that object into the stack. so , in stack also one object is created so copy was called
+    /*
+        Here we made b object so it's constructor called and then we copied that object into the stack.
+        So, in stack also one object is created so copy constructor was called.
+    */
     a_stack.push(b);
-    // here we make a object inside the stack only.
+
+    cout << "After using emplace in stack insertion :" << endl;
+    /*
+        here we make a object inside the stack's emplace method only.
+    */
     a_stack.emplace(20);
-    cout << a_stack.top().x << endl;
+    cout << "Top of the a_stack is : " << a_stack.top().x << endl;
 
     return 0;
 }

@@ -1,10 +1,15 @@
 /*
+    # transform function {from algorithm library}
 
     * transform for unary opeartion
     transform(inputBegin, inputEnd, OutputBegin, unary_opeartion)
 
     * transform for binary opeartion
     transform(inputBegin1, inputEnd1,inputBegin2, OutputBegin, unary_opeartion)
+
+    To learn more about transform visit : https://cplusplus.com/reference/algorithm/transform/
+
+    To learn more about operator overloading visit : https://en.cppreference.com/w/cpp/language/operators
 
 */
 
@@ -40,7 +45,7 @@ int main()
     int arr[] = {1, 2, 3, 4, 5};
     int n = sizeof(arr) / sizeof(arr[0]);
 
-    cout << "values of array before : ";
+    cout << "Values of array before : ";
     for (int i = 0; i < n; i++)
     {
         cout << arr[i] << " ";
@@ -59,7 +64,7 @@ int main()
     transform(arr, arr + n, arr, increment(10));
     transform(arr, arr + n, arr, increment(1));
 
-    cout << "values of array after incremented by 16 (5, 10, 1) are : ";
+    cout << "Values of array after incremented by 16 (5, 10, 1) are : ";
     for (int i = 0; i < n; i++)
     {
         cout << arr[i] << " ";

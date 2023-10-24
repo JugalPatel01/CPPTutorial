@@ -1,9 +1,12 @@
 /*
 
-    * switch and goto statement
+    # switch and goto statement
     -> switch is just like if else condition but faster then if condition because in switch character and it's actions are mapped in back-end.
 
     * using goto statement we can go back to the lable's position
+
+    To learn more about goto and swtich statement visit : https://cplusplus.com/doc/tutorial/control/
+
  */
 
 #include <iostream>
@@ -19,19 +22,18 @@ Here:
     {
     case 'a':
         cout << "Hello from a" << endl;
-
         break;
+
     case 'b':
         cout << "Hello from b" << endl;
-
         break;
+
     case 'c':
         cout << "Hello from c" << endl;
-
         break;
+
     case 'd':
         cout << "Hello from d" << endl;
-
         break;
 
     default:

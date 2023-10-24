@@ -1,9 +1,18 @@
 /*
-    Queue
-    -> It follows FIFO(first in first out) property
-    -> It is based on deque
+    # Queue
+    -> It follows FIFO(first in first out) property.
+    -> It can be implemented using deque or linked list but generally it uses deque for implementation.
+    -> operations on queue :
+        enqueue()
+        dequeue()
+        front()
+        size()
+        empty()
+
+    -> To learn more about queue visit : https://cplusplus.com/reference/queue/queue/
 
  */
+
 #include <iostream>
 #include <queue>
 using namespace std;
@@ -18,13 +27,13 @@ int main()
     q.push("1234");
     q.push("1235");
 
-    cout << "size of queue " << q.size() << endl;
-    cout << "first element " << q.front() << endl;
+    cout << "Size of queue : " << q.size() << endl;
+    cout << "First element of queue is : " << q.front() << endl;
     q.pop();
-    cout << "first element " << q.front() << endl;
+    cout << "First element of queue after dequeue opeartion : " << q.front() << endl;
 
-    cout << "size of queue " << q.size() << endl;
+    cout << "Size of queue : " << q.size() << endl;
 
-    cout << "empty or not " << q.empty() << endl;
+    cout << "whether queue is empty or not ? " << q.empty() << endl;
     return 0;
 }

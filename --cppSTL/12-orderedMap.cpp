@@ -1,11 +1,12 @@
 /*
     * Ordered Map
     -> Maps are implemented as red-black trees (one kind of binary search trees).
+    -> Maps are always sorted by its key.
     -> Map's doesn't contians duplicate values. if we try to insert duplicate values then it will rewrite that index's value.
     -> we can use complex data types for key.
 
-    NOTE : maps are not storing values in continous way so we can't use simple iterator on map like we can't use it = map.begin() + 3.
-    but we can use it++;
+    NOTE : maps are not storing values in continous way so we can't use simple iterator on map like we can't use
+           it = (map.begin() + 3) but we can use it++;
 
     * which default values are inserted in map ?
     -> for integer, float , double it's 0
@@ -20,9 +21,13 @@
     * difference between map and pair
     -> pair stores two objects but map stores key and values. And keys are unique.
 
-    * difference between multimap and map : 
+    * difference between multimap and map :
     -> in multimap repeated keys are allowed.
+
+    To learn more about map visit : https://cplusplus.com/reference/map/map/
+
 */
+
 #include <iostream>
 #include <map>
 using namespace std;
@@ -37,27 +42,30 @@ int main()
 
     map<int, string>::iterator it_traverse;
 
-    cout << "size of the map is : " << m.size() << endl;
+    cout << "Size of map m is : " << m.size() << endl;
+
     // here because of map is ordered it print in sorted order
+    cout << "Elements in map m are : " << endl;
     for (it_traverse = m.begin(); it_traverse != m.end(); it_traverse++)
     {
         cout << (*it_traverse).first << " " << (*it_traverse).second << endl;
     }
 
-    cout << "finding 3 --> " << m.count(3) << endl;
+    cout << "Is 3 present in map m ? " << m.count(3) << endl;
 
     // erase takes two kind of input 1) direct key 2) iterator
     // if we use clear then whole map become empty.
     m.erase(3);
 
-    cout << "after erase" << endl;
+    cout << "Remaining elements after erasing 3 from map m are : " << endl;
     for (auto i : m)
     {
         cout << i.first << " " << i.second << endl;
     }
-    cout << "finding 3 --> " << m.count(3) << endl;
+    cout << "Is 3 present in map m ? " << m.count(3) << endl;
 
     // if that key is not present in the map then it returns map.end()
+    cout << "elements in map from key 4 : " << endl;
     auto it = m.find(4);
 
     for (auto i = it; i != m.end(); i++)
@@ -65,7 +73,15 @@ int main()
         cout << (*i).first << " " << (*i).second << endl;
     }
 
-    // finding number of occurance ;
+    /*
+         Q : find total number of occurance of each element in given string.
+         i/p : aabbccdde
+         o/p : a 2
+               b 2
+               c 2
+               d 2
+               e 1
+    */
 
     map<char, int> cnt;
     string x = "abcslakdlg akdl1 3 5 13 5 23 5 3 2";
@@ -73,11 +89,12 @@ int main()
     {
         cnt[c]++;
     }
+    cout << "Occurance of each element in string s are given below : " << endl;
     for (auto i : cnt)
     {
         cout << i.first << " " << i.second << endl;
     }
-    cout << cnt['1'];
+    // cout << cnt['1'];
 
     return 0;
 }
