@@ -1,5 +1,6 @@
 *.exe
 .cph/
 .vscode/
-tempCodeRunnerFile.cpp
-tempCodeRunnerFile.c
+**/tempCodeRunnerFile.cpp
+**/tempCodeRunnerFile.c
+**/CppProperties.json

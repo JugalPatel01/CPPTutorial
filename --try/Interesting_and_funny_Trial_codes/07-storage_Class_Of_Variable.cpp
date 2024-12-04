@@ -5,11 +5,12 @@
     3)extern        life time : at the time of program termination    scope : Entire the file and other files where the variable is decalred as extern
     4)register      life time : at the time of function termination   scope : within the function
 
-    */
+*/
 
 #include <iostream>
 #define deb(x) cout << #x << " = " << x << " -> " << &x << endl;
 using namespace std;
+
 void function()
 {
     int a = 15;         // it is default and it terminate at the time of function termination
@@ -23,6 +24,7 @@ void function()
     cout << "register c = " << c << endl;
     cout << endl;
 }
+
 int main()
 {
     function();

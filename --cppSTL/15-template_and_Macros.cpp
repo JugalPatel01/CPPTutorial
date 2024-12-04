@@ -11,7 +11,7 @@
 
     To learn more about template function visit : https://cplusplus.com/doc/oldtutorial/templates/
 
-    NOTE :  #include <bits/stdc++.h> add all the library of cpp but increase some compilation time
+    NOTE :  #include <bits/stdc++.h> add all the library of cpp but increase some compilation time.
 
 */
 /*
@@ -49,7 +49,7 @@ void write(T... args)
     ((cout << args << " "), ...);
 }
 
-template <class T>
+template <typename T>
 T sum(T a, T b)
 {
     T res;

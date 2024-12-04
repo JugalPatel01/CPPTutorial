@@ -1,5 +1,7 @@
 In C++
 
+------------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------
 --> To minimize the potential for errors, C++ has adopted the convention of using header files to contain declarations.
     You make the declarations in a header file, then use the #include directive in every .cpp file or other header file that 
     requires that declaration.
@@ -22,9 +24,81 @@ possible functions.)
 --> To learn more about "" and <> refers : https://gcc.gnu.org/onlinedocs/cpp/Search-Path.html
                                          : https://cplusplus.com/doc/tutorial/preprocessor/   
 
+------------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------
+--> Which operators we can't overload in C++?
+        -> sizeof() operator, typeid() operator
+        -> Scope resolution (::)
+        -> Class member access operator (.)
+        -> ternary operator (?:)
 
+--> Which operators can't be overload using friend function but can be overloaded by member functions?
+        -> Assignment operator (=), function call operator (()),subscript operator ([]), Arrow operator(->)
+
+------------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------
+--> What is difference between constant and define ?
+        -> constant is a keyword whereas define is a preprocessor directive 
+        -> constant allows to specify the type of the constant , ensuring the type safety. whereas define is not providing any type safety as it performs a simple text replacement before compilation.
+        -> scope of the #define is global where as scope of the constant variable is according to the normal scoping rules.
+        -> constants occupy memory whereas #define do not allocate memory.
+        -> constant are evaluated at compile-time whereas define replaced it's corresponding values during preprocessing stage.
+
+--> What is difference between normal function and inline function?
+        -> When normal function is called, the program control is transferred to the function, and the function's code is executed. This involves a function call overhead, including pushing arguments onto the stack, jumping to the function address, and returning back to the calling point whereas when a inline function is called, the compiler replace the function call with the actual code at the point of the call. This eliminates the function call overhead.
+        -> execution time is lower in the inline function then normal function call.
+        -> normal functions provide more flexibility as they can be called from anywhere in the program and their definition can be seperate from the calling code whereas inline functions are typically defined in header files, and their definition must be available at the time of compilation. This can limit their flexibility and reusability across different source files.
+
+--> What is differnece between Macros and Inline functions?
+        -> macros are defined by #define preprocessor directive whereas inline functions are defined by inline keyword.
+        -> inline keyword, indicating to the compiler that the function should be inlined at the call time whereas macros are defined to take arguments and resemble function calls, but they are not true functions.They just replaced with their corresponding code during preprocessing.
+        -> Macros are not typesafe where as inline functions are type safe.
+        -> inline function can have block scope, function scope or class scope where as macros have global scope.
+
+------------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------
+--> Most important patterns in the programming
+        1) Prefix sum array  - Time complexity O(N)
+                -> for multiple range queries it is very useful
+        2) Two pointers pattern - Time complexity O(N) or O(Nlog(N)) depend on the problem
+                -> if problem on string to find palindrome string then it's O(N)
+                -> when problem is for finding exact sum of two variable then we have to sort the array so it's time complexity is O(Nlog(N)).
+        3) Sliding window pattern - Time complexity O(N)
+                -> for finding maximum subarray of k window size.
+        4) Fast and slow pointers - Time complexity O(N) or higher depend on the question
+                -> used for finding cycle in the linked list or array. Time complexity is more then O(N)
+                -> finding middle element of linkedlist in O(N) time complexity
+        5) Linkedlist inplace reversal - Time complexity O(N)
+                -> it doesn't requires extra space for reversing the linkedlist.
+        6) Monotonic Stack - Time complexity O(N)
+                -> it is used to find a next greater or next smaller element for each item in the array.
+                -> Find largest rectangle in histogram is a very nice problem to understand this type.
+        7) Top 'k' elements pattern using heaps - Time complexity O(Nlog(K))
+                -> it helps to find kth largest, kth smallest or kth's most frequent element.
+        8) Overlapping intervals pattern - Time complexity O(Nlog(N))
+                -> it is used for the problems which have intervals or ranges that may overlap.
+                -> we can use it in merging intervals(merge overlapping intervals into one), interval intersection , Insert interval , finding minimum number of meeting rooms.
+        9) Modified binary serach - Time complexity O(log(N))
+                -> it is used when we are seraching an element in the nearly sorted array, in the rotated sorted array, in the unknown length list, in the array with duplicates.
+                -> it is also used in the finding first and last occurance of element, finding the square root of a number, finding a peak element. 
+        10) Binary tree traversal - Time complexity O(N)
+                -> preorder, postorder, inorder and levelorder traversing.
+        11) DFS and BFS - Time complexity O(N)
+        12) Matrix traversal - Time complexity O(N^2)
+        13) Back tracking
+        14) Greedy approach
+        15) Dynamic programming
+                -> common patterns in DP - fibonacci series, kadane algorithm, 0-1 knapsack, unbounded knapsack, longest common subsequence, longest increasing subsequence, palindromic subsequence, edit distance, subset sum, string partition, catalan numbers, matrix multiplication, count distinct ways, dp on grid, dp on trees, bitmasking dp,etc.
+
+        -> for reference : https://www.youtube.com/watch?v=DjYZk8nrXVY
+                         : https://blog.algomaster.io/p/15-leetcode-patterns
+
+------------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------
 --> To learn more about STL libraries visit : https://cplusplus.com/reference/
 
 --> To learn about basic of cpp visit : https://en.cppreference.com/w/cpp/language
                                       : https://cplusplus.com/doc/tutorial/
 
+------------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------

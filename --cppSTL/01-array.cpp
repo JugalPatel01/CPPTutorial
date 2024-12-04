@@ -39,6 +39,7 @@ int main()
     // array memory allocation using STL array library
     array<int, 4> a = {1, 2, 3, 4};
 
+    // using size() function to get size of array.
     int size = a.size();
 
     cout << "Elements of array a : ";
@@ -48,11 +49,16 @@ int main()
     }
     cout << endl;
 
+    // accessing element at particular index using at() function.
     cout << "Element at 2nd Index in Array a : " << a.at(2) << endl;
 
+    // checking for empty array using empty() function.
     cout << "Array a is empty or not ? " << a.empty() << endl;
 
+    // getting first element using front() function.
     cout << "First element of Array a : " << a.front() << endl;
+    
+    // getting last element using back() function.
     cout << "Last element of Array a : " << a.back() << endl;
 
     return 0;

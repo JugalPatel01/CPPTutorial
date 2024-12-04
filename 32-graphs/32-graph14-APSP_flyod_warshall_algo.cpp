@@ -48,6 +48,8 @@ void floyd_warshall_algo(vector<vector<int>> &adj_mtx, vector<vector<int>> &ans)
                     ans[j][k] = min(ans[j][k], ans[j][i] + ans[i][k]);
             }
         }
+
+        cout << "stage " << i << " : " << endl;
         for (auto i : ans)
         {
             for (auto j : i)
@@ -61,6 +63,7 @@ void floyd_warshall_algo(vector<vector<int>> &adj_mtx, vector<vector<int>> &ans)
             }
             cout << endl;
         }
+        cout << endl;
     }
 }
 

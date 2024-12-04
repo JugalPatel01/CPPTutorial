@@ -61,6 +61,7 @@
 
 #include <iostream>
 #include <string.h>
+#include <utility>
 using namespace std;
 
 class human
@@ -72,6 +73,7 @@ class human
 public:
     int age;
     bool gender;
+    // -> for making a instances of class we have to make constructors public.
     human()
     {
         cout << "call from the default constructor" << endl;
@@ -93,13 +95,14 @@ public:
         age = a.age;
         gender = a.gender;
         cout << " call from the copy constructor" << endl;
-    } // copy constructor in this we pass address of the class in the parameter.
-    // here if we don't make copy constructor then compiler itself make on copy constructor.
+    } // copy constructor : In this we pass address of the class in the parameter.
+    // NOTE : If we don't make copy constructor then compiler itself create a copy constructor.
 
     /*
-    -> for making a instances of class we have to make constructors public.
 
-     * there are two types of copy constructors
+    # Deep copy and shallow copy
+
+    * there are two types of copy constructors
      1) defalut copy constructor 2) defined copy constructor
 
      deafult copy constructor doing shallow copy and defined copy constructor doing deep copy.
@@ -114,6 +117,31 @@ public:
      https://www.geeksforgeeks.org/difference-between-shallow-and-deep-copy-of-a-class/
 
     */
+
+    /*
+        # Move constructor and (lvalue and rvalue references)
+
+        -> The move constructor is used to transfer ownership of resources from one object to another object, avoiding need of duplicate deep copies and make process more efficient.
+        -> it is using rvalue reference(&&) for passing object as a parameter in consructor.
+        -> for accessing move constructor we are using move function which is in the utility library.
+
+        * what is lvalue and rvalue references ?
+            -> lvalue referneces (&) : it is only used to bind lvalues(lvalues are appears on left side and they occupies some identifiable memory which we can use through &).
+                                     : It provide a reference to an existing object with a name and memory address.
+            -> rvalue references (&&) : it is only used to bind rvalues(rvalues are appears on the right side and they are temporary objects)
+                                      : It is used for move semantic, to optimize performance by avoiding deep copies of resources.
+                                      : eg. int x = 10 ; here x is a lvalue and 10 is rvalue.(rvalue are temporary objects)
+
+         NOTE : To learn more about move constructor visit : https://www.geeksforgeeks.org/move-constructors-in-c-with-examples/
+    */
+
+    human(human &&a) : name(a.name), age(a.age), gender(a.gender)
+    {
+        cout << "call from the move constructor and it's now transfering ownership of name resources" << endl;
+        a.name = "";
+        a.age = 0;
+        a.gender = false;
+    } // move constructor
 
     ~human()
     {
@@ -196,12 +224,22 @@ int main()
     // opeartor overloading for polymorphism
     if (x == y)
     {
-        cout << "both are same " << endl;
+        cout << "After overloadiing we can see both x and y are same " << endl;
     }
     else
     {
-        cout << "both are not same " << endl;
+        cout << "method overloading fails and both x and y are not same " << endl;
     }
+
+    // move constructor
+    human genz = std::move(y);
+
+    // here after using move constructor all the resources which are belonging to y object is now transfered to the genz object. so here y object don't have any values in it as shown below.
+    cout << "printing values of genz after using move constructor" << endl;
+    genz.printInfo();
+    cout << endl;
+    cout << "printing values of y after using move constructor" << endl;
+    y.printInfo();
 
     return 0;
 }

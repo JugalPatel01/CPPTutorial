@@ -101,7 +101,7 @@ int main()
     Types_Of_Variables check;
     cout << "value of a & binside object check is a => " << check.a << " & b =>" << check.b << endl;
 
-    int m = (10, 20, 30, 40, 60), n;
+    int m = (10, 20, 30, 40, 60), n;        // this is because of operator precedence 
     n = 10, 20, 30, 40, 50, 60;
 
     cout << "after assigning multiple values using brackets m's value is : " << m << endl;

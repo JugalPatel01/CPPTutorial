@@ -57,6 +57,7 @@ public:
 };
 
 // insert a node at the tail of the linked list
+// here we are passing head node's pointer using reference that is why we have used node* &head
 void insert_at_tail(node *&head, int val)
 {
     node *n = new node(val);

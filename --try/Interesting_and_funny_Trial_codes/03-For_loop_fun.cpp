@@ -20,9 +20,10 @@ int main()
         printf("%d", fun() * fun());
     }
 
-    if(-1){     // if return true for all non zero elements
-        cout<<endl;
-        cout<<"it is working"<<endl;
+    if (-1)
+    { // if return true for all non zero elements
+        cout << endl;
+        cout << "it is working" << endl;
     }
 
     return 0;

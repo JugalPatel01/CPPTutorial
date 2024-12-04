@@ -12,10 +12,18 @@
 | Dynamic Programming            | Covered |
 | String Algorithms              | Covered |
 
-_# items covered in this tutorial are :_
+_# How to use this tutorial flowlessly?_
+- for Local copy : Open in any editor and turn on word wrap.
+- In gitlab repo : press `.`(dot) to open vscode in browser.
+- In github repo : click [option-1](https://github1s.com/JugalPatel01/CPPTutorial/) or click [option-2](https://vscode.dev/github/JugalPatel01/CPPTutorial) to open vscode.
 
-- [x] <a href="https://github.com/JugalPatel01/CPPTutorial/tree/main/--cppSTL" style="color: red; font-weight: bold;">STL (standard template library) in C++</a>
+_# Healthy advice: Use [C++ Insight](https://cppinsights.io/) to see how C++ code works internally._
 
+_# Items covered in this tutorial are :_
+
+- [x] <a href="https://github.com/JugalPatel01/CPPTutorial/tree/main/--cppSTL" style="color: lightgreen; font-weight: bold;">STL (standard template library) in C++</a>
+
+NOTE : don't forget to checkout [intresting concepts in C++](https://github.com/JugalPatel01/CPPTutorial/tree/main/--cppSTL/99-SomeImpThingsInCPP.txt)
 - [x] [Datatypes in C++](https://github.com/JugalPatel01/CPPTutorial/tree/main/01-datatype)
 - [x] [Loops in C++](https://github.com/JugalPatel01/CPPTutorial/tree/main/02-loops)
 - [x] [Switch in C++](https://github.com/JugalPatel01/CPPTutorial/tree/main/03-switch)

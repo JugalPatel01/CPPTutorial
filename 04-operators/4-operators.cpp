@@ -44,8 +44,41 @@ int main()
 
     int a = 1;
     a = 1;
+
     cout << "a=1 after post increment a is " << a++ << endl;
     cout << "a=2 after pre increment a is " << ++a << endl;
+
+    /*
+
+    NOTE : post-increment is may be not as efficient as pre-increment.
+         : For trivial datatypes it will not make much difference.
+         : But for user defined datatypes like class, or structure, which implements operator ++ make visible difference because in that operator++ method we have to create a temporary variable for storing actual value(we have to create a deep copy of the object) then we have to increase that value and after that we are returning that temporary variable in post increment/decrement. If temporary variable holding a large string then it cost memory and time.
+            : eg.
+                    int i = 0;
+                    // for pre-increment we are passing without any parameter
+                    int i{0};
+                    i.operator++();     // equal to ++i;
+
+                        // ++ operator overloading method in some class
+                            int operator++(){
+                                i = i + 1;
+                                return i;
+                            }
+                
+                
+                    // for post-increment we are passing parameter which takes some cost.
+                    int i{0};
+                    i.operator++(0);
+                        // ++ operator overloading method in some class
+                            int operator++(int){
+                                int temp = i;
+                                i = i+1;
+                                return temp;
+                            }
+                    // in post-increment we are creating temporary object which takes some extra cost.
+
+
+    */
 
     // in sizeof function it takes only data type of variable so increment operator will not work in sizeof function.
     cout << "size of a++ is " << sizeof(a++) << endl;

@@ -34,6 +34,7 @@ int main()
         cout << i << " ";
         this_thread::sleep_for(chrono::seconds(1));
     }
+    cout << endl;
 
     // it will print number after each second.
     cout << "Printing with flush : ";
@@ -42,10 +43,15 @@ int main()
         cout << i << " " << flush;
         this_thread::sleep_for(chrono::seconds(1));
     }
+    cout << endl;
 
     // here it create a new thread and start given function which is given inside the argument.
     thread t1(print_all, 0, 20);
     thread t2(print_all, 30, 50);
+
+    // Join threads to ensure they finish before main thread exists
+    t1.join();  // wait for thread t1 to finish
+    t2.join();  // wait for thread t2 to finish
 
     return 0;
 }

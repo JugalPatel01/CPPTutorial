@@ -13,29 +13,32 @@
 using namespace std;
 vector<vector<int>> ans;
 
-
-void helper(vector<int> a, vector<vector<int>> &ans , int idx){
-    if(idx == a.size()){
+void helper(vector<int> a, vector<vector<int>> &ans, int idx)
+{
+    if (idx == a.size())
+    {
         ans.push_back(a);
         return;
     }
 
-    for(int i=idx;i<a.size();i++){
-         if(i!=idx && a[i]==a[idx])
-         continue;
-         swap(a[i],a[idx]);
-         helper(a,ans,idx+1);
+    for (int i = idx; i < a.size(); i++)
+    {
+        if (i != idx && a[i] == a[idx])
+            continue;
+        swap(a[i], a[idx]);
+        helper(a, ans, idx + 1);
     }
-
 }
+
 vector<vector<int>> permute(vector<int> nums)
 {
-    sort(nums.begin(),nums.end());
+    sort(nums.begin(), nums.end());
 
-    vector<vector<int>> ans ;
-    helper(nums,ans,0);
+    vector<vector<int>> ans;
+    helper(nums, ans, 0);
     return ans;
 }
+
 int main()
 {
     int vector_size;
@@ -47,6 +50,7 @@ int main()
     {
         cin >> i;
     }
+
     vector<vector<int>> res = permute(a);
 
     for (auto v : res)
